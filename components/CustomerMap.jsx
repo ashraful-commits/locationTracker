@@ -33,7 +33,7 @@ const CustomerMap = () => {
   ]);
 
   return (
-    <div className="w-full h-[500px] rounded-lg shadow-lg border bg-white">
+    <div className="w-full h-[49vh] rounded-lg shadow-lg border bg-white">
       <MapContainer
         center={[37.7749, -122.4194]} // Initial map center (San Francisco)
         zoom={4}
