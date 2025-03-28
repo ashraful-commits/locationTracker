@@ -24,16 +24,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* app/globals.css */
-
-.leaflet-container {
-  z-index: 0 !important;
-}
-
-.leaflet-popup-content {
-  margin: 12px !important;
-}
-
-.leaflet-popup-content p {
-  margin: 0 !important;
-}
