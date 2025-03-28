@@ -6,9 +6,9 @@ import dynamic from "next/dynamic";
 const CustomerMap = dynamic(() => import("./CustomerMap"), { ssr: false });
 const LocationPage = dynamic(() => import("./LocationPage"), { ssr: false });
 
-const ClientMapComponent = () => {
+const ClientMapComponent = () => { 
   return (
-    <div className="w-full h-[500px] rounded-lg shadow-lg border bg-white">
+    <div className="w-screen space-y-3 h-screen flex justify-center items-center flex-col  rounded-lg shadow-lg border bg-white">
       <CustomerMap />
     <LocationPage />
     </div>

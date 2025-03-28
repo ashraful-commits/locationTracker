@@ -62,11 +62,11 @@ const LocationPage = () => {
   }
 
   return (
-    <div style={{ height: "49vh",marginTop:"1vh" }}>
+    <div className="w-[90vh] h-[50vh] border border-red-500  flex justify-center items-center p-10 flex-col">
       {address && (
-        <div>
-          <h2>Your Address:</h2>
-          <p>
+        <div className="flex gap-4">
+          <h2 className="text-red-500">Your Address:</h2>
+          <p className="text-black my-2">
             {address.road}, {address.city}, {address.state}, {address.country}
           </p>
         </div>
