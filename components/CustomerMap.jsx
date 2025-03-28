@@ -1,7 +1,7 @@
 "use client"; 
 
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet.css"; // Leaflet CSS to avoid style issues
 import { useState } from "react";
 import L from "leaflet";
 
@@ -10,6 +10,8 @@ const customIcon = new L.Icon({
   iconUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
 });
 
 const CustomerMap = () => {
@@ -33,7 +35,7 @@ const CustomerMap = () => {
   return (
     <div className="w-full h-[500px] rounded-lg shadow-lg border bg-white">
       <MapContainer
-        center={[37.7749, -122.4194]} // Adjust the center to your preferred location
+        center={[37.7749, -122.4194]} // Initial map center (San Francisco)
         zoom={4}
         className="w-full h-full rounded-lg"
       >

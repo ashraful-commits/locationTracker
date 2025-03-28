@@ -8,8 +8,12 @@ const LocationPage = () => {
   const [location, setLocation] = useState(null);
   const [address, setAddress] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // This ensures the code only runs in the browser
+    setIsClient(true);
+
     // Get the user's current location using the Geolocation API
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -50,6 +54,11 @@ const LocationPage = () => {
 
   if (!location) {
     return <div>Could not fetch location</div>;
+  }
+
+  // Return null or a fallback if it's server-side rendering
+  if (!isClient) {
+    return null;
   }
 
   return (
