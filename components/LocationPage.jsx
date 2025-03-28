@@ -62,7 +62,7 @@ const LocationPage = () => {
   }
 
   return (
-    <div style={{ height: "49vh" }}>
+    <div style={{ height: "49vh",marginTop:"1vh" }}>
       {address && (
         <div>
           <h2>Your Address:</h2>
